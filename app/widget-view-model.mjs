@@ -59,16 +59,27 @@ function timelineModel(items) {
   const visible = (Array.isArray(items) ? items : []).slice(0, 4);
   const activeIndex = visible.findIndex((item) => item?.bucket !== "done");
 
-  return visible.map((item, index) => ({
-    title: text(item?.title, "Untitled task"),
-    area: text(item?.area, "Unassigned"),
-    url: safeGitHubUrl(item?.url),
-    tone: item?.bucket === "done"
+  return visible.map((item, index) => {
+    const tone = item?.bucket === "done"
       ? "complete"
       : index === activeIndex
         ? "active"
-        : "queued",
-  }));
+        : "queued";
+    const state = {
+      active: { label: "Active", mark: "●" },
+      complete: { label: "Complete", mark: "✓" },
+      queued: { label: "Queued", mark: "○" },
+    }[tone];
+
+    return {
+      title: text(item?.title, "Untitled task"),
+      area: text(item?.area, "Unassigned"),
+      url: safeGitHubUrl(item?.url),
+      tone,
+      statusLabel: state.label,
+      statusMark: state.mark,
+    };
+  });
 }
 
 export function toWidgetModel(snapshot) {

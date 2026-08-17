@@ -87,8 +87,25 @@ test("selects the first unfinished item as the active timeline node", () => {
   const model = toWidgetModel(reordered);
 
   assert.equal(model.timeline[0].tone, "complete");
+  assert.equal(model.timeline[0].statusLabel, "Complete");
+  assert.equal(model.timeline[0].statusMark, "✓");
   assert.equal(model.timeline[1].tone, "active");
+  assert.equal(model.timeline[1].statusLabel, "Active");
+  assert.equal(model.timeline[1].statusMark, "●");
   assert.equal(model.timeline[2].tone, "complete");
+});
+
+test("exposes queued work with a textual and symbolic state", () => {
+  const model = toWidgetModel(snapshot);
+
+  assert.deepEqual(
+    {
+      area: model.timeline[1].area,
+      statusLabel: model.timeline[1].statusLabel,
+      statusMark: model.timeline[1].statusMark,
+    },
+    { area: "Security", statusLabel: "Queued", statusMark: "○" },
+  );
 });
 
 test("formats UTC dates with English ordinals", () => {
