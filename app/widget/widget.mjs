@@ -13,7 +13,7 @@ function setText(id, value) {
 }
 
 function setProgress(element, percent) {
-  element.style.setProperty("--progress", `${percent}%`);
+  element.style.setProperty("--ratio", String(percent / 100));
   element.setAttribute("aria-valuenow", String(percent));
 }
 
@@ -37,11 +37,12 @@ function createPaw() {
   return svg;
 }
 
-function groupRow(group) {
+function groupRow(group, index) {
   const row = document.createElement("div");
   row.className = "group-row";
   row.style.setProperty("--group-color", group.color);
-  row.style.setProperty("--progress", `${group.percent}%`);
+  row.style.setProperty("--ratio", String(group.percent / 100));
+  row.style.setProperty("--i", String(index));
   row.setAttribute("role", "progressbar");
   row.setAttribute("aria-label", `${group.name}: ${group.done} of ${group.total} complete`);
   row.setAttribute("aria-valuemin", "0");
@@ -63,9 +64,10 @@ function groupRow(group) {
   return row;
 }
 
-function timelineNode(item) {
+function timelineNode(item, index) {
   const entry = document.createElement("li");
   entry.className = `timeline-entry is-${item.tone}`;
+  entry.style.setProperty("--i", String(index));
 
   const node = document.createElement("span");
   node.className = "paw-node";
@@ -74,10 +76,26 @@ function timelineNode(item) {
 
   const label = item.url ? document.createElement("a") : document.createElement("span");
   label.className = "task-bubble";
-  label.title = `${item.title} · ${item.area}`;
+  label.title = `${item.title} · ${item.area} · ${item.statusLabel}`;
+  label.setAttribute("aria-label", `${item.title}, ${item.area}, ${item.statusLabel}`);
+
   const copy = document.createElement("span");
-  copy.className = "task-label";
-  copy.textContent = item.title;
+  copy.className = "task-copy";
+  const title = document.createElement("span");
+  title.className = "task-label-title";
+  title.textContent = item.title;
+  const metadata = document.createElement("span");
+  metadata.className = "task-label-meta";
+  const area = document.createElement("span");
+  area.textContent = item.area;
+  const state = document.createElement("span");
+  state.className = "task-state";
+  const mark = document.createElement("span");
+  mark.setAttribute("aria-hidden", "true");
+  mark.textContent = item.statusMark;
+  state.append(mark, item.statusLabel);
+  metadata.append(area, state);
+  copy.append(title, metadata);
   label.append(copy);
   if (item.url) {
     label.href = item.url;
@@ -90,6 +108,8 @@ function timelineNode(item) {
 }
 
 function render(model) {
+  const widget = document.querySelector(".widget");
+  widget.classList.remove("is-ready");
   setText("milestone-label", model.milestone.label);
   setText("milestone-date", model.milestone.date);
   setText("last-build", model.lastBuild);
@@ -116,6 +136,7 @@ function render(model) {
   setText("sync-state", `Live snapshot · refreshes every ${refreshSeconds}s`);
   currentGeneration = model.generatedAt;
   document.title = `${model.overall.label} widget`;
+  requestAnimationFrame(() => widget.classList.add("is-ready"));
 }
 
 async function refresh() {
