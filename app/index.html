@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark">
-    <meta name="theme-color" content="#080d14">
-    <meta name="description" content="A live public signal from Rahmi's GitHub Projects board.">
-    <meta property="og:title" content="LynxBoard — public development signal">
-    <meta property="og:description" content="Follow project progress, active work, and the next public target directly from GitHub.">
+    <meta name="theme-color" content="#171a2a">
+    <meta name="description" content="Live GitHub Project progress in an embeddable LynxBoard widget.">
+    <meta property="og:title" content="LynxBoard — live GitHub Project widget">
+    <meta property="og:description" content="A compact public progress panel synced from GitHub Projects.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://rahmibabapro.github.io/lynxboard/social-preview.png">
     <meta property="og:image:width" content="1200">
@@ -15,166 +15,19 @@
     <link rel="alternate" type="application/atom+xml" title="LynxBoard updates" href="./feed.xml">
     <link rel="icon" href="./assets/lynx-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles.css">
-    <title>LynxBoard — public development signal</title>
+    <title>LynxBoard — live GitHub Project widget</title>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to project signal</a>
-    <div class="page-shell">
-      <header class="masthead">
-        <a class="brand" href="./" aria-label="LynxBoard home">
-          <img src="./assets/lynx-mark.svg" width="44" height="44" alt="">
-          <span class="brand-copy">
-            <strong>LYNXBOARD</strong>
-            <span>PUBLIC SIGNAL / 001</span>
-          </span>
-        </a>
+    <main class="widget-stage">
+      <lynx-board
+        height="661"
+        refresh="30"
+        title="Rahmi's live GitHub Project progress"
+      >
+        <p class="loading-copy">Loading GitHub Project…</p>
+      </lynx-board>
+    </main>
 
-        <nav class="top-nav" aria-label="Project links">
-          <a href="https://github.com/rahmibabapro/lynxboard">Source</a>
-          <a href="./feed.xml">Atom feed</a>
-          <span class="live-state" id="live-state">
-            <span class="live-dot" aria-hidden="true"></span>
-            <span>Syncing</span>
-          </span>
-        </nav>
-      </header>
-
-      <main id="main">
-        <section class="intro" aria-labelledby="project-title">
-          <div>
-            <p class="eyebrow">Read-only telemetry from GitHub Projects</p>
-            <h1 id="project-title">Development Board</h1>
-          </div>
-          <p class="intro-copy" id="project-description">
-            Shared engineering backlog and delivery board.
-          </p>
-        </section>
-
-        <div class="dashboard-grid">
-          <section class="signal-console" aria-labelledby="console-heading">
-            <h2 class="visually-hidden" id="console-heading">Project progress</h2>
-
-            <div class="milestone-block">
-              <div class="milestone-copy">
-                <p>
-                  <strong id="milestone-days">—</strong>
-                  <span>days until <span id="milestone-label">next public preview</span></span>
-                </p>
-                <time id="milestone-date">Unscheduled</time>
-              </div>
-              <div class="time-rail" aria-hidden="true">
-                <span id="milestone-progress"></span>
-              </div>
-              <p class="utility-line">
-                Project updated <span id="project-updated">—</span>
-              </p>
-            </div>
-
-            <div class="overall-block">
-              <div class="section-heading">
-                <div>
-                  <span class="section-index">01</span>
-                  <h2>Development pulse</h2>
-                </div>
-                <p>
-                  <strong id="overall-percent">0%</strong>
-                  <span id="overall-count">0/0 tasks</span>
-                </p>
-              </div>
-
-              <div class="signal-slit" aria-hidden="true">
-                <span id="overall-progress"></span>
-              </div>
-
-              <div class="group-list" id="group-list" aria-live="polite">
-                <div class="group-skeleton"></div>
-                <div class="group-skeleton"></div>
-                <div class="group-skeleton"></div>
-              </div>
-
-              <div class="console-footer">
-                <p><strong id="changes-count">0</strong> changes in the last 24h</p>
-                <p>Last sync <time id="sync-time">—</time></p>
-              </div>
-            </div>
-          </section>
-
-          <aside class="side-panel" aria-label="Current project state">
-            <section class="status-strip" aria-labelledby="status-heading">
-              <div class="section-heading compact">
-                <div>
-                  <span class="section-index">02</span>
-                  <h2 id="status-heading">Queue state</h2>
-                </div>
-              </div>
-              <dl class="queue-stats">
-                <div>
-                  <dt>Queued</dt>
-                  <dd id="todo-count">0</dd>
-                </div>
-                <div>
-                  <dt>Active</dt>
-                  <dd id="active-count">0</dd>
-                </div>
-                <div>
-                  <dt>Closed</dt>
-                  <dd id="done-count">0</dd>
-                </div>
-              </dl>
-            </section>
-
-            <section class="active-work" aria-labelledby="active-heading">
-              <div class="section-heading compact">
-                <div>
-                  <span class="section-index">03</span>
-                  <h2 id="active-heading">Priority channel</h2>
-                </div>
-              </div>
-              <ol class="work-list" id="work-list">
-                <li class="work-skeleton"></li>
-                <li class="work-skeleton"></li>
-                <li class="work-skeleton"></li>
-              </ol>
-            </section>
-          </aside>
-        </div>
-
-        <section class="follow-strip" aria-labelledby="follow-heading">
-          <div>
-            <span class="section-index">04</span>
-            <h2 id="follow-heading">Follow the signal</h2>
-            <p>No account layer. GitHub remains the source of truth.</p>
-          </div>
-          <div class="follow-actions">
-            <a class="action-link primary" id="project-link" href="https://github.com/users/rahmibabapro/projects/1">
-              Open live board
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="action-link" href="https://github.com/rahmibabapro/lynxboard/subscription">
-              Watch on GitHub
-              <span aria-hidden="true">＋</span>
-            </a>
-            <a class="action-link" href="./feed.xml">
-              Subscribe to Atom
-              <span aria-hidden="true">◌</span>
-            </a>
-          </div>
-        </section>
-
-        <p class="error-state" id="error-state" role="alert" hidden>
-          The public snapshot could not be loaded. Open the GitHub board for the current state.
-        </p>
-      </main>
-
-      <footer class="site-footer">
-        <p>Built in public · synced from GitHub · zero tracking</p>
-        <p>quiet systems / sharp instincts</p>
-      </footer>
-    </div>
-
-    <noscript>
-      <p class="noscript">JavaScript is required to render the latest public Project snapshot.</p>
-    </noscript>
-    <script type="module" src="./app.mjs"></script>
+    <script type="module" src="./embed.mjs"></script>
   </body>
 </html>

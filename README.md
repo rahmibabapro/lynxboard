@@ -5,9 +5,39 @@ A public, icy-blue delivery signal generated from the
 
 **Live board:** <https://rahmibabapro.github.io/lynxboard/>
 
+**Direct widget:** <https://rahmibabapro.github.io/lynxboard/widget/>
+
 LynxBoard turns GitHub Project items into a compact progress view with a milestone,
-area totals, current priorities, and recent activity. It refreshes on GitHub Pages
-twice an hour. The browser receives only a sanitized static snapshot—never a token.
+area totals, current priorities, and recent activity. The browser receives only a
+sanitized static snapshot—never a token.
+
+## Embed on any site
+
+Use the custom element when you control the page HTML:
+
+```html
+<script type="module" src="https://rahmibabapro.github.io/lynxboard/embed.mjs"></script>
+<lynx-board height="661" refresh="30"></lynx-board>
+```
+
+Or use the standalone iframe:
+
+```html
+<iframe
+  src="https://rahmibabapro.github.io/lynxboard/widget/"
+  title="Live GitHub Project progress"
+  width="562"
+  height="661"
+  loading="lazy"
+  referrerpolicy="no-referrer"
+  sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+  style="max-width:100%;border:0"
+></iframe>
+```
+
+The custom element is responsive, dependency-free, and isolates the widget in a
+sandboxed iframe. The optional `refresh` attribute accepts 15–3600 seconds and controls
+how often the visible widget checks for a newly published snapshot.
 
 ## Follow the work
 
@@ -23,6 +53,10 @@ twice an hour. The browser receives only a sanitized static snapshot—never a t
 2. The sync boundary rejects drafts, redacted content, private links, and non-GitHub URLs.
 3. A dependency-free build produces the dashboard, an Atom feed, and crawler metadata.
 4. GitHub Pages deploys the generated `dist` artifact.
+
+GitHub only exposes Projects v2 item webhooks for organization Projects. Because this
+board belongs to a personal account, LynxBoard uses the shortest supported Actions
+schedule and visible-tab polling rather than claiming instant webhook delivery.
 
 There is no database, analytics script, client-side API credential, or runtime backend.
 
@@ -53,6 +87,7 @@ general-purpose developer token.
 - [Architecture and delivery research](docs/research.md)
 - [Project sync contract](SPEC-project-sync.md)
 - [Status surface contract](SPEC-status-surface.md)
+- [Embed widget contract](SPEC-embed-widget.md)
 - [Public delivery contract](SPEC-public-delivery.md)
 
 ## License
