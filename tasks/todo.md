@@ -27,3 +27,15 @@
 - [x] Enable and verify the five-minute Project sync.
   - Acceptance: schedule, manual dispatch, Pages, and live JSON checks succeed.
   - Verify: GitHub Actions plus live browser checks.
+- [ ] Define and implement the professional visual token system.
+  - Acceptance: hierarchy, spacing, type, surfaces, and data colors follow `SPEC-visual-polish.md`.
+  - Verify: screenshots at 562×661 and 390 px.
+- [ ] Expose task state without relying on color.
+  - Acceptance: every timeline card includes area and Active/Queued/Complete metadata.
+  - Verify: `node --test tests/widget-view-model.test.mjs` plus role inspection.
+- [ ] Add restrained data-entry and active-signal motion.
+  - Acceptance: animations use transform/opacity and disappear under reduced motion.
+  - Verify: browser emulation for `prefers-reduced-motion: reduce`.
+- [ ] Publish and verify the polished widget release.
+  - Acceptance: tests, build, live Pages deployment, and release checks succeed.
+  - Verify: full test suite, clean browser console/network, and GitHub Actions.

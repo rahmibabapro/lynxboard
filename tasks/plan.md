@@ -9,6 +9,9 @@
 7. Derive a reference-faithful widget view model and visual surface.
 8. Package the surface as an iframe and `<lynx-board>` web component.
 9. Reduce automatic refresh latency to GitHub's safe minimum and publish v0.2.0.
+10. Rework the widget as a professional release-telemetry surface with explicit states.
+11. Add purposeful motion with a complete reduced-motion fallback.
+12. Verify, package, and publish the professional visual release.
 
 ## Risks and mitigations
 
