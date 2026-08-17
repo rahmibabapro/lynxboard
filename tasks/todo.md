@@ -12,6 +12,6 @@
 - [x] Build public delivery and feed generation.
   - Acceptance: `dist` contains the validated site and Atom feed.
   - Verify: `node scripts/build.mjs`
-- [ ] Publish and verify GitHub Pages.
+- [x] Publish and verify GitHub Pages.
   - Acceptance: public HTTPS URL loads and latest workflow succeeds.
   - Verify: live browser and Actions checks.
