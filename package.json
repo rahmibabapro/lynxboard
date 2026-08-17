@@ -1,0 +1,17 @@
+{
+  "name": "lynxboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.17.0",
+  "scripts": {
+    "test": "node --test",
+    "sync": "node scripts/sync-project.mjs",
+    "validate": "node scripts/validate-snapshot.mjs app/data/project.json",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

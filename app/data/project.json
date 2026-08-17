@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-17T19:12:40.800Z",
+  "source": {
+    "owner": "rahmibabapro",
+    "projectNumber": 1
+  },
+  "project": {
+    "title": "Development Board",
+    "url": "https://github.com/users/rahmibabapro/projects/1",
+    "shortDescription": "Shared engineering backlog and delivery board.",
+    "updatedAt": "2026-08-17T14:19:25.000Z"
+  },
+  "milestone": {
+    "label": "next public preview",
+    "date": "2026-09-30",
+    "daysRemaining": 44
+  },
+  "totals": {
+    "total": 5,
+    "done": 0,
+    "inProgress": 0,
+    "todo": 5,
+    "percent": 0
+  },
+  "groups": [
+    {
+      "name": "Infrastructure",
+      "counts": {
+        "done": 0,
+        "total": 3
+      },
+      "percent": 0,
+      "color": "#69a7c1"
+    },
+    {
+      "name": "Documentation",
+      "counts": {
+        "done": 0,
+        "total": 1
+      },
+      "percent": 0,
+      "color": "#e0c93a"
+    },
+    {
+      "name": "Minecraft",
+      "counts": {
+        "done": 0,
+        "total": 1
+      },
+      "percent": 0,
+      "color": "#82934a"
+    }
+  ],
+  "changesLast24h": 5,
+  "items": [
+    {
+      "id": "PVTI_lAHODRYLm84BgnNzzg22PQM",
+      "type": "Issue",
+      "title": "Connect GitHub repository updates to Discord",
+      "url": "https://github.com/rahmibabapro/rahmibabapro/issues/2",
+      "number": 2,
+      "repository": "rahmibabapro/rahmibabapro",
+      "repositoryUrl": "https://github.com/rahmibabapro/rahmibabapro",
+      "status": "Todo",
+      "bucket": "todo",
+      "area": "Infrastructure",
+      "priority": "P1 - High",
+      "effort": "S",
+      "targetDate": null,
+      "updatedAt": "2026-08-17T14:17:20.000Z",
+      "assignees": [
+        "rahmibabapro"
+      ]
+    },
+    {
+      "id": "PVTI_lAHODRYLm84BgnNzzg22PMc",
+      "type": "Issue",
+      "title": "Choose and publish Atrium's open-source license",
+      "url": "https://github.com/rahmibabapro/atrium/issues/3",
+      "number": 3,
+      "repository": "rahmibabapro/atrium",
+      "repositoryUrl": "https://github.com/rahmibabapro/atrium",
+      "status": "Todo",
+      "bucket": "todo",
+      "area": "Documentation",
+      "priority": "P1 - High",
+      "effort": "XS",
+      "targetDate": null,
+      "updatedAt": "2026-08-17T14:17:06.000Z",
+      "assignees": [
+        "rahmibabapro"
+      ]
+    },
+    {
+      "id": "PVTI_lAHODRYLm84BgnNzzg22PLc",
+      "type": "Issue",
+      "title": "Upgrade the Next.js dependency chain after security audit",
+      "url": "https://github.com/rahmibabapro/atrium/issues/2",
+      "number": 2,
+      "repository": "rahmibabapro/atrium",
+      "repositoryUrl": "https://github.com/rahmibabapro/atrium",
+      "status": "Todo",
+      "bucket": "todo",
+      "area": "Infrastructure",
+      "priority": "P1 - High",
+      "effort": "L",
+      "targetDate": null,
+      "updatedAt": "2026-08-17T14:17:02.000Z",
+      "assignees": [
+        "rahmibabapro"
+      ]
+    },
+    {
+      "id": "PVTI_lAHODRYLm84BgnNzzg22PPc",
+      "type": "Issue",
+      "title": "Prepare a standalone public release",
+      "url": "https://github.com/rahmibabapro/WorldDownloadPreventer/issues/1",
+      "number": 1,
+      "repository": "rahmibabapro/WorldDownloadPreventer",
+      "repositoryUrl": "https://github.com/rahmibabapro/WorldDownloadPreventer",
+      "status": "Todo",
+      "bucket": "todo",
+      "area": "Minecraft",
+      "priority": "P2 - Normal",
+      "effort": "L",
+      "targetDate": null,
+      "updatedAt": "2026-08-17T14:17:15.000Z",
+      "assignees": [
+        "rahmibabapro"
+      ]
+    },
+    {
+      "id": "PVTI_lAHODRYLm84BgnNzzg22PNs",
+      "type": "Issue",
+      "title": "Deploy the Solecraft demo and finish repository previews",
+      "url": "https://github.com/rahmibabapro/atrium/issues/4",
+      "number": 4,
+      "repository": "rahmibabapro/atrium",
+      "repositoryUrl": "https://github.com/rahmibabapro/atrium",
+      "status": "Todo",
+      "bucket": "todo",
+      "area": "Infrastructure",
+      "priority": "P2 - Normal",
+      "effort": "M",
+      "targetDate": null,
+      "updatedAt": "2026-08-17T14:17:11.000Z",
+      "assignees": [
+        "rahmibabapro"
+      ]
+    }
+  ]
+}
