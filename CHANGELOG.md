@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0 — 2026-08-17
+
+- Replace the neon game-HUD treatment with the calm Quiet Winter direction.
+- Introduce soft charcoal surfaces, low-saturation winter blue, and native UI type.
+- Remove scan lines, glows, red target signals, cut corners, and condensed uppercase copy.
+- Simplify progress and task states into quieter rounded surfaces with one lynx thread.
+- Keep motion brief and non-looping, with a complete reduced-motion fallback.
+- Preserve the 562×661 composition and overflow-free 390 px and 320 px layouts.
+
 ## 0.4.0 — 2026-08-17
 
 - Replace the conventional dashboard-card styling with the Arctic Field Log direction.

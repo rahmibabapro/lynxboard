@@ -15,6 +15,8 @@
 13. Research and define a non-SaaS visual direction rooted in lynx and arctic fieldwork.
 14. Recast the widget as an Arctic Field Log without changing its data behavior.
 15. Verify and publish the v0.4 visual release.
+16. Replace the game-HUD treatment with the calm Quiet Winter visual system.
+17. Verify and publish the v0.5 visual release without changing data behavior.
 
 ## Risks and mitigations
 

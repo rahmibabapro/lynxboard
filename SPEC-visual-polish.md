@@ -1,8 +1,10 @@
 # Spec: professional visual polish
 
-> Visual tokens and composition were superseded by the v0.4 Arctic Field Log direction
-> in [`docs/design-research-v2.md`](docs/design-research-v2.md). Accessibility, motion,
-> resilience, and performance requirements in this document remain active.
+> Visual tokens and composition were superseded by the v0.5 Quiet Winter direction in
+> [`docs/design-direction-v3.md`](docs/design-direction-v3.md). Accessibility, motion,
+> resilience, and performance requirements in this document remain active. The previous
+> Arctic Field Log exploration remains archived in
+> [`docs/design-research-v2.md`](docs/design-research-v2.md).
 
 ## Objective
 

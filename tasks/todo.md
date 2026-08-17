@@ -48,3 +48,9 @@
 - [x] Publish and verify the v0.4 visual release.
   - Acceptance: Pages and the live iframe match the reviewed local screenshots.
   - Verify: GitHub Actions plus live browser checks.
+- [x] Implement and verify the Quiet Winter presentation.
+  - Acceptance: neon/HUD decoration is removed in favor of calm, low-saturation surfaces.
+  - Verify: screenshots at 562, 390, and 320 px; reduced-motion and contrast checks.
+- [ ] Publish and verify the v0.5 visual release.
+  - Acceptance: Pages and the live iframe match the reviewed local screenshots.
+  - Verify: GitHub Actions plus live browser checks.
