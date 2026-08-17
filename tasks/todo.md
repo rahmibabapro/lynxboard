@@ -45,6 +45,6 @@
 - [x] Implement the Arctic Field Log presentation.
   - Acceptance: the widget uses the lynx sigil, numbered track, cut geometry, and target signal.
   - Verify: screenshots at 562, 390, and 320 px with no overflow.
-- [ ] Publish and verify the v0.4 visual release.
+- [x] Publish and verify the v0.4 visual release.
   - Acceptance: Pages and the live iframe match the reviewed local screenshots.
   - Verify: GitHub Actions plus live browser checks.
