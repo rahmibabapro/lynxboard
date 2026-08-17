@@ -3,6 +3,7 @@ import { resolve, sep } from "node:path";
 
 import { createAtomFeed } from "../lib/feed.mjs";
 import { assertValidSnapshot } from "../lib/project-data.mjs";
+import { createStatusCard } from "../lib/status-card.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const app = resolve(root, "app");
@@ -19,11 +20,17 @@ const [config, snapshot] = await Promise.all([
 
 assertValidSnapshot(snapshot);
 
+const darkStatusCard = createStatusCard(snapshot, { theme: "dark" });
+const lightStatusCard = createStatusCard(snapshot, { theme: "light" });
+
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 await cp(app, dist, { recursive: true });
 await Promise.all([
   writeFile(resolve(dist, "feed.xml"), createAtomFeed(snapshot, config), "utf8"),
+  writeFile(resolve(dist, "status.svg"), darkStatusCard, "utf8"),
+  writeFile(resolve(dist, "status-dark.svg"), darkStatusCard, "utf8"),
+  writeFile(resolve(dist, "status-light.svg"), lightStatusCard, "utf8"),
   writeFile(resolve(dist, ".nojekyll"), "", "utf8"),
   writeFile(
     resolve(dist, "robots.txt"),
@@ -43,4 +50,6 @@ await Promise.all([
   ),
 ]);
 
-process.stdout.write(`Built LynxBoard from ${snapshot.items.length} public Project items.\n`);
+process.stdout.write(
+  `Built LynxBoard and README status cards from ${snapshot.items.length} public Project items.\n`,
+);
