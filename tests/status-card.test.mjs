@@ -33,6 +33,7 @@ test("creates an accessible GitHub-ready status card from the public snapshot", 
   assert.match(svg, /40%/);
   assert.match(svg, /5 Tasks/);
   assert.match(svg, /43 days until next public preview/);
+  assert.match(svg, /Synced Aug 18th · 08:30 UTC/);
   assert.match(svg, /Infrastructure/);
   assert.match(svg, /1 \/ 2/);
   assert.doesNotMatch(svg, /<(?:script|image)|\s(?:href|xlink:href)=/i);
