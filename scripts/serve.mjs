@@ -30,6 +30,7 @@ const server = createServer(async (request, response) => {
     response.writeHead(200, {
       "Content-Type": contentTypes.get(extname(file)) ?? "application/octet-stream",
       "Cache-Control": "no-store",
+      "Access-Control-Allow-Origin": "*",
       "X-Content-Type-Options": "nosniff",
     });
     createReadStream(file).pipe(response);
