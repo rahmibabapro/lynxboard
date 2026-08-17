@@ -36,6 +36,6 @@
 - [x] Add restrained data-entry and active-signal motion.
   - Acceptance: animations use transform/opacity and disappear under reduced motion.
   - Verify: browser emulation for `prefers-reduced-motion: reduce`.
-- [ ] Publish and verify the polished widget release.
+- [x] Publish and verify the polished widget release.
   - Acceptance: tests, build, live Pages deployment, and release checks succeed.
   - Verify: full test suite, clean browser console/network, and GitHub Actions.
