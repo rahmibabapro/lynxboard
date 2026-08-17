@@ -15,7 +15,7 @@
 - [x] Publish and verify GitHub Pages.
   - Acceptance: public HTTPS URL loads and latest workflow succeeds.
   - Verify: live browser and Actions checks.
-- [ ] Derive the compact widget presentation contract.
+- [x] Derive the compact widget presentation contract.
   - Acceptance: pure logic produces truthful milestone, area, and timeline labels.
   - Verify: `node --test tests/widget-view-model.test.mjs`
 - [ ] Build the reference-faithful iframe widget.
