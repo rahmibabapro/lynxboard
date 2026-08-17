@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.6.0 — 2026-08-18
+
+### Added
+
+- Publish script-free `status.svg`, `status-dark.svg`, and `status-light.svg` cards for GitHub READMEs and other image-only surfaces.
+- Include truthful snapshot freshness, recent activity, milestone, overall completion, and area progress in each card.
+- Add copyable responsive README snippets and a comparable-project decision record.
+
+### Security
+
+- Escape every public label before SVG rendering and reject unknown card themes.
+- Keep cards free of scripts, external resources, runtime API calls, and credentials.
+
 ## 0.5.0 — 2026-08-17
 
 - Replace the neon game-HUD treatment with the calm Quiet Winter direction.

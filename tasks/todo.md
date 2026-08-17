@@ -54,3 +54,12 @@
 - [x] Publish and verify the v0.5 visual release.
   - Acceptance: Pages and the live iframe match the reviewed local screenshots.
   - Verify: GitHub Actions plus live browser checks.
+- [x] Review comparable GitHub card and dashboard repositories.
+  - Acceptance: adopted and rejected patterns are recorded with their source repositories.
+  - Verify: `docs/comparable-projects.md`.
+- [x] Generate GitHub README-safe project status cards.
+  - Acceptance: light and dark SVGs are accessible, escaped, self-contained, and truthful.
+  - Verify: `node --test tests/status-card.test.mjs` plus real-browser screenshots.
+- [ ] Publish and verify the v0.6 status-card release.
+  - Acceptance: all three stable card URLs load from Pages and match the current snapshot.
+  - Verify: GitHub Actions, HTTP checks, and live browser screenshots.

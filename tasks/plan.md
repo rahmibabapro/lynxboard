@@ -17,6 +17,9 @@
 15. Verify and publish the v0.4 visual release.
 16. Replace the game-HUD treatment with the calm Quiet Winter visual system.
 17. Verify and publish the v0.5 visual release without changing data behavior.
+18. Compare mature GitHub card and Actions-powered dashboard repositories.
+19. Generate accessible light and dark README cards from the sanitized Project snapshot.
+20. Document, verify, and publish the additive v0.6 delivery release.
 
 ## Risks and mitigations
 
