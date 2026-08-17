@@ -39,3 +39,12 @@
 - [x] Publish and verify the polished widget release.
   - Acceptance: tests, build, live Pages deployment, and release checks succeed.
   - Verify: full test suite, clean browser console/network, and GitHub Actions.
+- [x] Research a distinctive LynxBoard visual direction.
+  - Acceptance: the direction is grounded in game UI, mission-control, and dark UI references.
+  - Verify: `docs/design-research-v2.md` records the references and final visual grammar.
+- [x] Implement the Arctic Field Log presentation.
+  - Acceptance: the widget uses the lynx sigil, numbered track, cut geometry, and target signal.
+  - Verify: screenshots at 562, 390, and 320 px with no overflow.
+- [ ] Publish and verify the v0.4 visual release.
+  - Acceptance: Pages and the live iframe match the reviewed local screenshots.
+  - Verify: GitHub Actions plus live browser checks.

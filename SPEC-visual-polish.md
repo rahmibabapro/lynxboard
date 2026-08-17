@@ -1,5 +1,9 @@
 # Spec: professional visual polish
 
+> Visual tokens and composition were superseded by the v0.4 Arctic Field Log direction
+> in [`docs/design-research-v2.md`](docs/design-research-v2.md). Accessibility, motion,
+> resilience, and performance requirements in this document remain active.
+
 ## Objective
 
 Evolve the compact LynxBoard widget from a reference-faithful game-style panel into a

@@ -12,6 +12,9 @@
 10. Rework the widget as a professional release-telemetry surface with explicit states.
 11. Add purposeful motion with a complete reduced-motion fallback.
 12. Verify, package, and publish the professional visual release.
+13. Research and define a non-SaaS visual direction rooted in lynx and arctic fieldwork.
+14. Recast the widget as an Arctic Field Log without changing its data behavior.
+15. Verify and publish the v0.4 visual release.
 
 ## Risks and mitigations
 

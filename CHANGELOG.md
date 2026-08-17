@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0 — 2026-08-17
+
+- Replace the conventional dashboard-card styling with the Arctic Field Log direction.
+- Introduce a visible lynx sigil, topographic field texture, and condensed display type.
+- Turn the task list into a numbered tracking sequence with a red active-target lock.
+- Replace rounded cards and live pills with cut corners, hairlines, and telemetry labels.
+- Add a single field-scan reveal while preserving the full reduced-motion fallback.
+- Keep the key milestone readable as a controlled two-line heading at 320 px.
+
 ## 0.3.0 — 2026-08-17
 
 - Reframe the widget as a professional, compact release-telemetry surface.

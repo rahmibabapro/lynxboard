@@ -9,8 +9,9 @@ A public, icy-blue delivery signal generated from the
 
 LynxBoard turns GitHub Project items into a compact release-telemetry view with a
 milestone, truthful area totals, explicit task states, current priorities, and recent
-activity. The professional ice-and-amber interface keeps its lynx signal rail while the
-browser receives only a sanitized static snapshot—never a token.
+activity. Its Arctic Field Log interface combines a lynx sigil, frost-blue telemetry,
+numbered tracking marks, and one red active-target signal. The browser receives only a
+sanitized static snapshot—never a token.
 
 GitHub Actions refreshes the source snapshot every five minutes. An open widget checks
 for the newly published snapshot every 30 seconds by default.
@@ -96,6 +97,7 @@ general-purpose developer token.
 - [Status surface contract](SPEC-status-surface.md)
 - [Embed widget contract](SPEC-embed-widget.md)
 - [Professional visual polish contract](SPEC-visual-polish.md)
+- [Arctic Field Log design research](docs/design-research-v2.md)
 - [Public delivery contract](SPEC-public-delivery.md)
 
 ## License
