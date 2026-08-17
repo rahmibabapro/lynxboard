@@ -1,6 +1,6 @@
 :root {
   color-scheme: dark;
-  background: #0d1320;
+  background: #070b12;
 }
 
 * {
@@ -16,9 +16,10 @@ body {
 
 body {
   background:
-    radial-gradient(circle at 50% 38%, rgb(80 135 190 / 15%), transparent 32rem),
-    linear-gradient(135deg, rgb(255 255 255 / 1.5%), transparent 42%),
-    #0d1320;
+    radial-gradient(circle at 45% 34%, rgb(120 215 255 / 10%), transparent 30rem),
+    radial-gradient(circle at 58% 68%, rgb(255 79 112 / 6%), transparent 25rem),
+    linear-gradient(135deg, rgb(255 255 255 / 1.2%), transparent 42%),
+    #070b12;
 }
 
 .widget-stage {
@@ -32,15 +33,17 @@ lynx-board {
   display: block;
   width: min(100%, 562px);
   min-height: 661px;
-  border: 1px solid rgb(142 197 244 / 7%);
-  background: #090d14;
-  box-shadow: 0 28px 90px rgb(0 0 0 / 38%);
+  border: 1px solid rgb(120 215 255 / 11%);
+  background: #05080d;
+  box-shadow:
+    0 32px 100px rgb(0 0 0 / 52%),
+    0 0 60px rgb(120 215 255 / 4%);
 }
 
 .loading-copy {
   margin: 0;
   padding: 40px;
-  color: #94a3b8;
+  color: #8c9bad;
   font: 15px/1.5 "Segoe UI", sans-serif;
 }
 

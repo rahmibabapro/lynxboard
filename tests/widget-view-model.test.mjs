@@ -53,6 +53,7 @@ test("derives reference-style labels from a truthful Project snapshot", () => {
   assert.equal(model.milestone.progress, 51);
   assert.equal(model.lastBuild, "Aug 17th");
   assert.equal(model.overall.label, "Development Board - 50%");
+  assert.equal(model.overall.title, "Development Board");
   assert.equal(model.overall.tasks, "4 Tasks");
   assert.equal(model.changes, "3 Changes in last 24hrs");
   assert.deepEqual(model.groups[0], {

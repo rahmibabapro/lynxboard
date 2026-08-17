@@ -93,6 +93,7 @@ export function toWidgetModel(snapshot) {
     milestone: milestoneModel(snapshot?.milestone),
     lastBuild: formatOrdinalDate(snapshot?.generatedAt),
     overall: {
+      title,
       label: `${title} - ${percent}%`,
       tasks: `${total} ${total === 1 ? "Task" : "Tasks"}`,
       percent,

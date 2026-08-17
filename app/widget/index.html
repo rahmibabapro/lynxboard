@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark">
-    <meta name="theme-color" content="#090d14">
+    <meta name="theme-color" content="#05080d">
     <meta name="robots" content="noindex">
     <link rel="stylesheet" href="./widget.css">
     <title>Development Board widget</title>
@@ -13,18 +13,21 @@
     <main class="widget" aria-labelledby="overall-label">
       <header class="widget-topbar">
         <div class="brand-lockup">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>LYNXBOARD</span>
+          <img src="../assets/lynx-mark.svg" width="42" height="42" alt="">
+          <span class="brand-copy">
+            <span>LYNX//</span>
+            <strong>FIELD LOG</strong>
+          </span>
         </div>
         <div class="topbar-actions">
-          <span class="live-badge"><span aria-hidden="true"></span>Live</span>
+          <span class="live-badge"><span aria-hidden="true"></span>Sync / Live</span>
           <a
             class="project-link"
             id="project-link"
             href="https://github.com/users/rahmibabapro/projects/1"
             target="_blank"
             rel="noopener noreferrer"
-          >View board <span aria-hidden="true">↗</span></a>
+          >Open board <span aria-hidden="true">↗</span></a>
         </div>
       </header>
 
@@ -47,18 +50,27 @@
 
       <section class="progress-panel" aria-labelledby="overall-label">
         <div class="overall-heading">
-          <h2 id="overall-label">Development Board - 0%</h2>
-          <p id="task-count">0 Tasks</p>
+          <div>
+            <span class="section-code">Delivery / 01</span>
+            <h2 id="overall-label">Development Board</h2>
+          </div>
+          <div class="overall-readout">
+            <strong id="overall-percent">000%</strong>
+            <p id="task-count">0 Tasks</p>
+          </div>
         </div>
         <div class="group-list" id="group-list" aria-live="polite">
           <div class="group-placeholder"></div>
           <div class="group-placeholder"></div>
           <div class="group-placeholder"></div>
         </div>
-        <p class="changes" id="changes">0 Changes in last 24hrs</p>
       </section>
 
       <section class="timeline-panel" aria-label="Current priority timeline">
+        <div class="timeline-heading">
+          <span id="timeline-label">Current track / 00</span>
+          <p class="changes" id="changes">0 Changes in last 24hrs</p>
+        </div>
         <ol class="timeline" id="timeline" aria-live="polite">
           <li class="timeline-placeholder"></li>
           <li class="timeline-placeholder"></li>
