@@ -7,9 +7,10 @@ A public, icy-blue delivery signal generated from the
 
 **Direct widget:** <https://rahmibabapro.github.io/lynxboard/widget/>
 
-LynxBoard turns GitHub Project items into a compact progress view with a milestone,
-area totals, current priorities, and recent activity. The browser receives only a
-sanitized static snapshot—never a token.
+LynxBoard turns GitHub Project items into a compact release-telemetry view with a
+milestone, truthful area totals, explicit task states, current priorities, and recent
+activity. The professional ice-and-amber interface keeps its lynx signal rail while the
+browser receives only a sanitized static snapshot—never a token.
 
 GitHub Actions refreshes the source snapshot every five minutes. An open widget checks
 for the newly published snapshot every 30 seconds by default.
@@ -41,6 +42,9 @@ Or use the standalone iframe:
 The custom element is responsive, dependency-free, and isolates the widget in a
 sandboxed iframe. The optional `refresh` attribute accepts 15–3600 seconds and controls
 how often the visible widget checks for a newly published snapshot.
+
+The widget uses a short staged reveal when a new snapshot arrives. It automatically
+removes all movement and transitions for visitors using `prefers-reduced-motion`.
 
 ## Follow the work
 
@@ -91,6 +95,7 @@ general-purpose developer token.
 - [Project sync contract](SPEC-project-sync.md)
 - [Status surface contract](SPEC-status-surface.md)
 - [Embed widget contract](SPEC-embed-widget.md)
+- [Professional visual polish contract](SPEC-visual-polish.md)
 - [Public delivery contract](SPEC-public-delivery.md)
 
 ## License
