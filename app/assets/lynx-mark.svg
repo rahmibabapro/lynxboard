@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">LynxBoard signal mark</title>
+  <path fill="#0a111b" stroke="#6fc9dd" stroke-width="2" d="M11 22 17 7l9 11h12L47 7l6 15-4 22-17 13-17-13Z"/>
+  <path fill="none" stroke="#dbeeff" stroke-linecap="round" stroke-width="3" d="m19 30 9 3m17-3-9 3"/>
+  <path fill="#d8a956" d="m29 43 3 3 3-3-3-2Z"/>
+  <path fill="none" stroke="#6fc9dd" stroke-linecap="round" stroke-width="2" d="m15 38-8 2m10 3-9 5m41-10 8 2m-10 3 9 5"/>
+</svg>
+

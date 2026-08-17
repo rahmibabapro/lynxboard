@@ -6,7 +6,7 @@
 - [x] Implement the GitHub GraphQL read boundary.
   - Acceptance: Project 1 can refresh without mutations or credential output.
   - Verify: `node scripts/sync-project.mjs`
-- [ ] Build the LynxBoard status surface.
+- [x] Build the LynxBoard status surface.
   - Acceptance: desktop/mobile, keyboard, empty, and error states work.
   - Verify: browser smoke test at `http://127.0.0.1:4173/`
 - [ ] Build public delivery and feed generation.
