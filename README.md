@@ -11,6 +11,9 @@ LynxBoard turns GitHub Project items into a compact progress view with a milesto
 area totals, current priorities, and recent activity. The browser receives only a
 sanitized static snapshot—never a token.
 
+GitHub Actions refreshes the source snapshot every five minutes. An open widget checks
+for the newly published snapshot every 30 seconds by default.
+
 ## Embed on any site
 
 Use the custom element when you control the page HTML:

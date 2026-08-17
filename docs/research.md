@@ -41,3 +41,18 @@ adapter derives presentation data, and the public surface stays disposable.
 - All public HTML is static; the browser cannot query GitHub with privileged credentials.
 - The workflow has read-only repository permission except for the isolated Pages deploy
   job, which receives only `pages: write` and `id-token: write`.
+
+## Refresh latency
+
+GitHub's scheduled workflows support a shortest interval of five minutes:
+[Workflow syntax for scheduled events](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onschedule).
+The widget polls the already-sanitized public snapshot every 30 seconds while visible,
+so an open embed picks up a successful deployment without a page reload.
+
+GitHub documents `projects_v2_item` webhooks only for organization Projects, and account
+webhooks cannot be created for personal user resources:
+[Webhook events and payloads](https://docs.github.com/en/webhooks/webhook-events-and-payloads#projects_v2_item),
+[Types of webhooks](https://docs.github.com/en/webhooks/types-of-webhooks).
+The current user-owned Project therefore cannot provide true event-driven item updates.
+The workflow already accepts a `project-sync` repository dispatch so an organization
+Project and GitHub App receiver can be added later without changing the widget contract.

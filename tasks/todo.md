@@ -24,6 +24,6 @@
 - [x] Publish the reusable `<lynx-board>` module.
   - Acceptance: a separate host page can load `embed.mjs` and render a sandboxed widget.
   - Verify: browser host-page smoke test.
-- [ ] Enable and verify the five-minute Project sync.
+- [x] Enable and verify the five-minute Project sync.
   - Acceptance: schedule, manual dispatch, Pages, and live JSON checks succeed.
   - Verify: GitHub Actions plus live browser checks.
