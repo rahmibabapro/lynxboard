@@ -23,13 +23,13 @@ class LynxBoardElement extends HTMLElement {
         max-width: 562px;
         min-width: 0;
         overflow: hidden;
-        background: #05080d;
+        background: #111318;
       }
       iframe {
         display: block;
         width: 100%;
         border: 0;
-        background: #05080d;
+        background: #111318;
         color-scheme: dark;
       }
     `;

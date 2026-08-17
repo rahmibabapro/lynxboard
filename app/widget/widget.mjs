@@ -115,10 +115,10 @@ function render(model) {
   setText("last-build", model.lastBuild);
   setProgress(byId("milestone-rail"), model.milestone.progress);
   setText("overall-label", model.overall.title);
-  setText("overall-percent", `${String(model.overall.percent).padStart(3, "0")}%`);
+  setText("overall-percent", `${model.overall.percent}%`);
   setText("task-count", model.overall.tasks);
   setText("changes", model.changes);
-  setText("timeline-label", `Current track / ${String(model.timeline.length).padStart(2, "0")}`);
+  setText("timeline-label", `Current focus · ${model.timeline.length}`);
 
   const groups = model.groups.length > 0
     ? model.groups.map(groupRow)
