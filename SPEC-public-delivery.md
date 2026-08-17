@@ -2,7 +2,7 @@
 
 ## Objective
 
-Publish LynxBoard from GitHub Actions to GitHub Pages, refresh it every 30 minutes, and give visitors durable follow mechanisms without creating another account system.
+Publish LynxBoard from GitHub Actions to GitHub Pages, refresh it every five minutes, and give visitors durable follow mechanisms without creating another account system.
 
 ## Tech Stack
 
@@ -50,11 +50,12 @@ Declare the smallest workflow permissions and pass the project token only to the
 ## Success Criteria
 
 - Public Pages URL loads over HTTPS.
-- Schedule and manual dispatch both update the snapshot.
+- The minimum-supported five-minute schedule and manual dispatch both update the snapshot.
 - Visitors can open the source Project, watch the repository, and subscribe to Atom.
 - Deploy fails closed on invalid generated data.
 
 ## Open Questions
 
 - Discord delivery is intentionally deferred until the target server/channel is known.
-
+- Personal Projects have no Projects v2 item webhook. Event-driven refresh would require
+  an organization Project plus a GitHub App webhook receiver.

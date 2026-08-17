@@ -15,3 +15,15 @@
 - [x] Publish and verify GitHub Pages.
   - Acceptance: public HTTPS URL loads and latest workflow succeeds.
   - Verify: live browser and Actions checks.
+- [ ] Derive the compact widget presentation contract.
+  - Acceptance: pure logic produces truthful milestone, area, and timeline labels.
+  - Verify: `node --test tests/widget-view-model.test.mjs`
+- [ ] Build the reference-faithful iframe widget.
+  - Acceptance: 562×661 and 390px views match the supplied structure without overflow.
+  - Verify: browser screenshots and clean console.
+- [ ] Publish the reusable `<lynx-board>` module.
+  - Acceptance: a separate host page can load `embed.mjs` and render a sandboxed widget.
+  - Verify: browser host-page smoke test.
+- [ ] Enable and verify the five-minute Project sync.
+  - Acceptance: schedule, manual dispatch, Pages, and live JSON checks succeed.
+  - Verify: GitHub Actions plus live browser checks.
