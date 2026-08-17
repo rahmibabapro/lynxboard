@@ -1,6 +1,11 @@
 import { safeGitHubUrl } from "./view-model.mjs";
 
 const FALLBACK_COLOR = "#59637d";
+const TIMELINE_STATES = {
+  active: { label: "Active", mark: "●" },
+  complete: { label: "Complete", mark: "✓" },
+  queued: { label: "Queued", mark: "○" },
+};
 const MONTHS = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
@@ -65,11 +70,7 @@ function timelineModel(items) {
       : index === activeIndex
         ? "active"
         : "queued";
-    const state = {
-      active: { label: "Active", mark: "●" },
-      complete: { label: "Complete", mark: "✓" },
-      queued: { label: "Queued", mark: "○" },
-    }[tone];
+    const state = TIMELINE_STATES[tone];
 
     return {
       title: text(item?.title, "Untitled task"),
