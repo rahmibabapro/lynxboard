@@ -60,6 +60,6 @@
 - [x] Generate GitHub README-safe project status cards.
   - Acceptance: light and dark SVGs are accessible, escaped, self-contained, and truthful.
   - Verify: `node --test tests/status-card.test.mjs` plus real-browser screenshots.
-- [ ] Publish and verify the v0.6 status-card release.
+- [x] Publish and verify the v0.6 status-card release.
   - Acceptance: all three stable card URLs load from Pages and match the current snapshot.
   - Verify: GitHub Actions, HTTP checks, and live browser screenshots.
